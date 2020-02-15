@@ -36,7 +36,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         ImageView defaultImageView = (ImageView) listItemView.findViewById(R.id.image_view);
 
-        defaultImageView.setImageResource(currentNews.getmImageResourceId());
+        defaultImageView.setImageResource(R.drawable.gaming);
         defaultImageView.setVisibility(View.VISIBLE);
 
 

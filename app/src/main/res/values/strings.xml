@@ -14,5 +14,17 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">Quake Report</string>
+    <string name="app_name">Slas News App</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_gaming">Gaming</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_politics">Politics</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_sports">Sports</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_finance">Finance</string>
 </resources>

@@ -57,10 +57,12 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(gamingIntent);
                 }catch(Exception e){
                     Context context = getApplicationContext();
-                    CharSequence text = "Hier tritt der gamingIntent ein!";
+//                    CharSequence text = "Hier tritt der gamingIntent ein!";
+                    CharSequence text2 = e.getMessage();
                     int duration = Toast.LENGTH_SHORT;
 
-                    Toast toast = Toast.makeText(context, text, duration);
+//                    Toast toast = Toast.makeText(context, text, duration);
+                    Toast toast = Toast.makeText(context, text2, duration);
                     toast.show();
                 }
 
@@ -71,10 +73,22 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view){
-                Intent politicsIntent = new Intent(MainActivity.this, PoliticsActivity.class);
 
-                //Start the new activity
-                startActivity(politicsIntent);
+
+                try{
+                    //some exception
+                    Intent politicsIntent = new Intent(MainActivity.this, PoliticsActivity.class);
+
+                    //Start the new activity
+                    startActivity(politicsIntent);
+                }catch(Exception e){
+                    Context context = getApplicationContext();
+                    CharSequence text = "Hier tritt der politicsIntent Catch ein!";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
             }
         });
 
@@ -82,10 +96,22 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view){
-                Intent sportsIntent = new Intent(MainActivity.this, SportsActivity.class);
 
-                //Start the new activity
-                startActivity(sportsIntent);
+
+                try{
+                    //some exception
+                    Intent sportsIntent = new Intent(MainActivity.this, SportsActivity.class);
+
+                    //Start the new activity
+                    startActivity(sportsIntent);
+                }catch(Exception e){
+                    Context context = getApplicationContext();
+                    CharSequence text = "Hier tritt der sportsIntent Catch ein!";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
             }
         });
 
@@ -95,11 +121,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent financeIntent = new Intent(MainActivity.this, FinanceActivity.class);
+                try{
+                    //some exception
+                    Intent financeIntent = new Intent(MainActivity.this, FinanceActivity.class);
 
-                //Start the new activity
-                startActivity(financeIntent);
-                new JsonTask().execute("https://newsapi.org/v2/everything?q=bitcoin&from=2020-01-14&sortBy=publishedAt&apiKey=API_KEY");
+                    //Start the new activity
+                    startActivity(financeIntent);
+                    new JsonTask().execute("https://newsapi.org/v2/everything?q=bitcoin&from=2020-01-14&sortBy=publishedAt&apiKey=API_KEY");
+                }catch(Exception e){
+                    Context context = getApplicationContext();
+                    CharSequence text = "Hier tritt der financeIntent Catch ein!";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
             }
         });
 

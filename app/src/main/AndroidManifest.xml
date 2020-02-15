@@ -28,6 +28,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GamingActivity"
+            android:label="@string/category_gaming"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".PoliticsActivity"
+            android:label="@string/category_politics"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SportsActivity"
+            android:label="@string/category_sports"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FinanceActivity"
+            android:label="@string/category_finance"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>
