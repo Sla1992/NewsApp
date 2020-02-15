@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gaming"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_height"
+            android:text="Gaming World"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/gaming"/>
+
+        <TextView
+            android:id="@+id/politics"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_height"
+            android:text="Politics"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/politics"/>
+
+
+        <TextView
+            android:id="@+id/sports"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_height"
+            android:text="Sports"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="@drawable/sports"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/finance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_height"
+            android:text="Finance"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="@drawable/finance"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
