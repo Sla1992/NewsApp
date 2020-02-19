@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
 
                     //Start the new activity
                     startActivity(financeIntent);
-                    new JsonTask().execute("https://newsapi.org/v2/everything?q=bitcoin&from=2020-01-14&sortBy=publishedAt&apiKey=API_KEY");
                 }catch(Exception e){
                     Context context = getApplicationContext();
                     CharSequence text = "Hier tritt der financeIntent Catch ein!";

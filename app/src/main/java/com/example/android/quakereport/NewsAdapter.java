@@ -34,17 +34,17 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         News currentNews = getItem(position);
 
-        ImageView defaultImageView = (ImageView) listItemView.findViewById(R.id.image_view);
-
-        defaultImageView.setImageResource(R.drawable.gaming);
-        defaultImageView.setVisibility(View.VISIBLE);
-
-
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title);
         titleTextView.setText(currentNews.getmTitle());
 
-        TextView infoTextView = (TextView) listItemView.findViewById(R.id.info);
-        infoTextView.setText(currentNews.getmInfo());
+        TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description);
+        descriptionTextView.setText(currentNews.getmDescription());
+
+        TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
+        descriptionTextView.setText(currentNews.getmTime());
+
+        TextView timeTextView = (TextView) listItemView.findViewById(R.id.time);
+        descriptionTextView.setText(currentNews.getmTime());
 
         return listItemView;
 

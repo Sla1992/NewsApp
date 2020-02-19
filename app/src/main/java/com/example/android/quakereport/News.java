@@ -2,31 +2,24 @@ package com.example.android.quakereport;
 
 public class News {
 
-    private String mImage;
     private String mTitle;
-    private String mInfo;
+    private String mDescription;
     private String mUrl;
+    private String mTime;
 
     private int mImageResourceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
     // Constructor
-    public News(String image, String title, String info, String url){
-        mImage = image;
+    public News(String title, String description, String time, String url){
+
         mTitle = title;
-        mInfo = info;
+        mDescription = description;
+        mTime = time;
         mUrl = url;
     }
 
     //Getters and setters
-
-    public String getmImage() {
-        return mImage;
-    }
-
-    public void setmImage(String mImage) {
-        this.mImage = mImage;
-    }
 
     public String getmTitle() {
         return mTitle;
@@ -36,13 +29,6 @@ public class News {
         this.mTitle = mTitle;
     }
 
-    public String getmInfo() {
-        return mInfo;
-    }
-
-    public void setmInfo(String mInfo) {
-        this.mInfo = mInfo;
-    }
 
     public String getmUrl() {
         return mUrl;
@@ -58,5 +44,21 @@ public class News {
 
     public void setmImageResourceId(int mImageResourceId) {
         this.mImageResourceId = mImageResourceId;
+    }
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
+
+    public String getmTime() {
+        return mTime;
+    }
+
+    public void setmTime(String mTime) {
+        this.mTime = mTime;
     }
 }

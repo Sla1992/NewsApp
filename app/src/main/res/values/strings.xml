@@ -27,4 +27,10 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_finance">Finance</string>
+
+    <!-- Message that shows that there are no News available yet-->
+    <string name="no_news">Oops! There are no news yet! :)</string>
+
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection.</string>
 </resources>
