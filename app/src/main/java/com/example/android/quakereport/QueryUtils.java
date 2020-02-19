@@ -150,7 +150,7 @@ public final class QueryUtils {
 
             // Extract the JSONArray associated with the key called "features",
             // which represents a list of features (or news).
-            JSONArray newsArray = baseJsonResponse.getJSONArray("features");
+            JSONArray newsArray = baseJsonResponse.getJSONArray("articles");
 
             // For each news in the newsArray, create an {@link News} object
             for (int i = 0; i < newsArray.length(); i++) {
@@ -158,23 +158,17 @@ public final class QueryUtils {
                 // Get a single news at position i within the list of news
                 JSONObject currentNews = newsArray.getJSONObject(i);
 
-                // For a given news, extract the JSONObject associated with the
-                // key called "articles", which represents a list of all articles
-                // for that news.
-                JSONObject articles = currentNews.getJSONObject("articles");
-
-
                 // Extract the value for the key called "title"
-                String title = articles.getString("title");
+                String title = currentNews.getString("title");
 
                 // Extract the value for the keys called "description"
-                String description = articles.getString("description");
+                String description = currentNews.getString("description");
 
                 // Extract the value for the key called "time"
-                String time = articles.getString("publishedAt");
+                String time = currentNews.getString("publishedAt");
 
                 // Extract the value for the key called "url"
-                String url = articles.getString("url");
+                String url = currentNews.getString("url");
 
                 // Create a new {@link News} object with the magnitude, location, time,
                 // and url from the JSON response.

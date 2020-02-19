@@ -2,6 +2,8 @@ package com.example.android.quakereport;
 
 public class News {
 
+
+
     private String mTitle;
     private String mDescription;
     private String mUrl;
@@ -29,6 +31,13 @@ public class News {
         this.mTitle = mTitle;
     }
 
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
 
     public String getmUrl() {
         return mUrl;
@@ -38,22 +47,6 @@ public class News {
         this.mUrl = mUrl;
     }
 
-    public int getmImageResourceId() {
-        return mImageResourceId;
-    }
-
-    public void setmImageResourceId(int mImageResourceId) {
-        this.mImageResourceId = mImageResourceId;
-    }
-
-    public String getmDescription() {
-        return mDescription;
-    }
-
-    public void setmDescription(String mDescription) {
-        this.mDescription = mDescription;
-    }
-
     public String getmTime() {
         return mTime;
     }
@@ -61,4 +54,7 @@ public class News {
     public void setmTime(String mTime) {
         this.mTime = mTime;
     }
+
+
+
 }
