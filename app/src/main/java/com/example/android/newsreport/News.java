@@ -1,8 +1,4 @@
-package com.example.android.quakereport;
-
-import android.net.Uri;
-
-import java.net.URL;
+package com.example.android.newsreport;
 
 public class News {
 

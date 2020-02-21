@@ -1,8 +1,5 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import org.json.JSONArray;

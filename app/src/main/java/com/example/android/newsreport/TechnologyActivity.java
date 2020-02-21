@@ -1,4 +1,4 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 import android.app.LoaderManager;
 import android.content.Context;
@@ -12,22 +12,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GamingActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
+public class TechnologyActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
     /** Adapter for the list of news */
 
-    private static final String LOG_TAG = GamingActivity.class.getName();
+    private static final String LOG_TAG = TechnologyActivity.class.getName();
 
     /** URL for news data from the newsapi.org dataset */
-    private static final String GAMING_REQUEST_URL =
-            "http://newsapi.org/v2/everything?q=gaming&language=en&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
+    private static final String TECHNOLOGY_REQUEST_URL =
+            "http://newsapi.org/v2/top-headlines?country=de&category=technology&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -58,9 +57,6 @@ public class GamingActivity extends AppCompatActivity implements LoaderManager.L
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         newsListView.setAdapter(mAdapter);
-
-        // Start the AsyncTask to fetch the news data
-
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected news.
@@ -113,7 +109,7 @@ public class GamingActivity extends AppCompatActivity implements LoaderManager.L
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle){
         Log.e(LOG_TAG, "TEST: EarthquakeActivity onCreateLoader() called.");
         //Create a new loader for the given URL
-        return new NewsLoader(this, GAMING_REQUEST_URL);
+        return new NewsLoader(this, TECHNOLOGY_REQUEST_URL);
 
 
     }
@@ -146,33 +142,4 @@ public class GamingActivity extends AppCompatActivity implements LoaderManager.L
 
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.news_list);
-//
-//        //Create an array of words
-//        final ArrayList<News> news = new ArrayList<News>();
-//
-//
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//        news.add(new News("@drawable/gaming", "gamingnewsasdads", "A little info about the news", "http://www.google.ch"));
-//
-//
-//        NewsAdapter adapter = new NewsAdapter(this, news);
-//
-//        ListView listView = (ListView) findViewById(R.id.list);
-//
-//        listView.setAdapter(adapter);
-//
-//    }
 }

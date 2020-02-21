@@ -1,15 +1,13 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 import android.content.Context;
 
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.Closeable;
@@ -41,18 +39,6 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }
 
         News currentNews = getItem(position);
-
-//        ImageView imageView =  (ImageView) listItemView.findViewById(R.id.image_view);
-//        imageView.setBackground(new ImageLoader( (ImageView) listItemView.findViewById(R.id.image_view)).execute(currentNews.getmImageUrl()));
-//        try {
-//            ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
-//            Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL(currentNews.getmImageUrl()).getContent());
-//            imageView.setImageBitmap(bitmap);
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
 
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title);

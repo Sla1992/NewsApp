@@ -1,4 +1,4 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 import android.app.LoaderManager;
 import android.content.Context;
@@ -18,15 +18,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PoliticsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>>{
+public class FinanceActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
     /** Adapter for the list of news */
 
-    private static final String LOG_TAG = GamingActivity.class.getName();
+    private static final String LOG_TAG = FinanceActivity.class.getName();
 
     /** URL for news data from the newsapi.org dataset */
-    private static final String POLITICS_REQUEST_URL =
-            "http://newsapi.org/v2/everything?q=politics&language=en&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
+    private static final String FINANCE_REQUEST_URL =
+            "http://newsapi.org/v2/everything?q=finance&language=en&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -57,8 +57,6 @@ public class PoliticsActivity extends AppCompatActivity implements LoaderManager
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         newsListView.setAdapter(mAdapter);
-
-        // Start the AsyncTask to fetch the news data
 
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
@@ -106,17 +104,13 @@ public class PoliticsActivity extends AppCompatActivity implements LoaderManager
             mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
 
-        // Update empty state with no connection error message
-
-
     }
 
     @Override
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle){
         Log.e(LOG_TAG, "TEST: EarthquakeActivity onCreateLoader() called.");
         //Create a new loader for the given URL
-        return new NewsLoader(this, POLITICS_REQUEST_URL);
-
+        return new NewsLoader(this, FINANCE_REQUEST_URL);
 
     }
 

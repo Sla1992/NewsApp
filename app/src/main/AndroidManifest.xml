@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.quakereport">
+    package="com.example.android.newsreport">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -25,34 +25,34 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.android.newsreport.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".GamingActivity"
+            android:name="com.example.android.newsreport.GamingActivity"
             android:label="@string/category_gaming"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.example.android.newsreport.MainActivity">
         </activity>
         <activity
-            android:name=".TechnologyActivity"
+            android:name="com.example.android.newsreport.TechnologyActivity"
             android:label="@string/category_technology"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.example.android.newsreport.MainActivity">
         </activity>
         <activity
-            android:name=".PoliticsActivity"
+            android:name="com.example.android.newsreport.PoliticsActivity"
             android:label="@string/category_politics"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.example.android.newsreport.MainActivity"/>
         <activity
-            android:name=".SportsActivity"
+            android:name="com.example.android.newsreport.SportsActivity"
             android:label="@string/category_sports"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.example.android.newsreport.MainActivity"/>
         <activity
-            android:name=".FinanceActivity"
+            android:name="com.example.android.newsreport.FinanceActivity"
             android:label="@string/category_finance"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.example.android.newsreport.MainActivity"/>
 
     </application>
 
