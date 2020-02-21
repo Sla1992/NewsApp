@@ -19,6 +19,9 @@
     <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="category_gaming">Gaming</string>
 
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_technology">Technology</string>
+
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_politics">Politics</string>
 

@@ -1,5 +1,8 @@
 package com.example.android.quakereport;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import org.json.JSONArray;
@@ -158,6 +161,9 @@ public final class QueryUtils {
                 // Get a single news at position i within the list of news
                 JSONObject currentNews = newsArray.getJSONObject(i);
 
+                //Extract the value for the key called "urlToImage"
+                String imageUrl = currentNews.getString("urlToImage");
+
                 // Extract the value for the key called "title"
                 String title = currentNews.getString("title");
 
@@ -172,7 +178,7 @@ public final class QueryUtils {
 
                 // Create a new {@link News} object with the magnitude, location, time,
                 // and url from the JSON response.
-                News singleNews = new News(title, description, time, url);
+                News singleNews = new News(imageUrl, title, description, time, url);
 
                 // Add the new {@link News} to the list of news.
                 news.add(singleNews);
@@ -188,5 +194,6 @@ public final class QueryUtils {
         // Return the list of news
         return news;
     }
+
 }
 //}

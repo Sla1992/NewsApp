@@ -37,6 +37,11 @@
             android:parentActivityName=".MainActivity">
         </activity>
         <activity
+            android:name=".TechnologyActivity"
+            android:label="@string/category_technology"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
             android:name=".PoliticsActivity"
             android:label="@string/category_politics"
             android:parentActivityName=".MainActivity"/>

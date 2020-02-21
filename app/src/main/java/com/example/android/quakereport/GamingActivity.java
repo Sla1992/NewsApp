@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ public class GamingActivity extends AppCompatActivity implements LoaderManager.L
 
     /** URL for news data from the newsapi.org dataset */
     private static final String GAMING_REQUEST_URL =
-            "http://newsapi.org/v2/everything?q=gaming&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
+            "http://newsapi.org/v2/everything?q=gaming&language=en&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -105,9 +106,6 @@ public class GamingActivity extends AppCompatActivity implements LoaderManager.L
             loadingIndicator.setVisibility(View.GONE);
             mEmptyStateTextView.setText(R.string.no_internet_connection);
         }
-
-        // Update empty state with no connection error message
-
 
     }
 

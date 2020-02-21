@@ -18,15 +18,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PoliticsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>>{
+public class TechnologyActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
     /** Adapter for the list of news */
 
-    private static final String LOG_TAG = GamingActivity.class.getName();
+    private static final String LOG_TAG = TechnologyActivity.class.getName();
 
     /** URL for news data from the newsapi.org dataset */
-    private static final String POLITICS_REQUEST_URL =
-            "http://newsapi.org/v2/everything?q=politics&language=en&sortBy=publishedAt&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
+    private static final String TECHNOLOGY_REQUEST_URL =
+            "http://newsapi.org/v2/top-headlines?country=de&category=technology&apiKey=4dc9786797ab4cc5a4d9e12b0187d54d";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -115,7 +115,7 @@ public class PoliticsActivity extends AppCompatActivity implements LoaderManager
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle){
         Log.e(LOG_TAG, "TEST: EarthquakeActivity onCreateLoader() called.");
         //Create a new loader for the given URL
-        return new NewsLoader(this, POLITICS_REQUEST_URL);
+        return new NewsLoader(this, TECHNOLOGY_REQUEST_URL);
 
 
     }

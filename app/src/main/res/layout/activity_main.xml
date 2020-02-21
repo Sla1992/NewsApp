@@ -26,6 +26,16 @@
             android:textStyle="bold"
             android:gravity="center"
             android:background="@drawable/gaming"/>
+        <TextView
+            android:id="@+id/technology"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_height"
+            android:text="Technology"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/technology"/>
 
         <TextView
             android:id="@+id/politics"

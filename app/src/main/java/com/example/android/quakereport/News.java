@@ -1,9 +1,12 @@
 package com.example.android.quakereport;
 
+import android.net.Uri;
+
+import java.net.URL;
+
 public class News {
 
-
-
+    private String mImageUrl;
     private String mTitle;
     private String mDescription;
     private String mUrl;
@@ -13,8 +16,8 @@ public class News {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     // Constructor
-    public News(String title, String description, String time, String url){
-
+    public News(String imageUrl, String title, String description, String time, String url){
+        mImageUrl = imageUrl;
         mTitle = title;
         mDescription = description;
         mTime = time;
@@ -22,6 +25,14 @@ public class News {
     }
 
     //Getters and setters
+
+    public String getmImageUrl() {
+        return mImageUrl;
+    }
+
+    public void setmImageUrl(String mImageUrl) {
+        this.mImageUrl = mImageUrl;
+    }
 
     public String getmTitle() {
         return mTitle;

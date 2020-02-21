@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView gaming = (TextView)findViewById(R.id.gaming);
+        TextView technology = (TextView)findViewById(R.id.technology);
         TextView politics = (TextView)findViewById(R.id.politics);
         TextView sports = (TextView)findViewById(R.id.sports);
         TextView finance = (TextView)findViewById(R.id.finance);
@@ -55,6 +56,31 @@ public class MainActivity extends AppCompatActivity {
 
                     //Start the new activity
                     startActivity(gamingIntent);
+                }catch(Exception e){
+                    Context context = getApplicationContext();
+//                    CharSequence text = "Hier tritt der gamingIntent ein!";
+                    CharSequence text2 = e.getMessage();
+                    int duration = Toast.LENGTH_SHORT;
+
+//                    Toast toast = Toast.makeText(context, text, duration);
+                    Toast toast = Toast.makeText(context, text2, duration);
+                    toast.show();
+                }
+
+            }
+        });
+
+        technology.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+
+                try{
+                    //some exception
+                    Intent technologyIntent = new Intent(MainActivity.this, TechnologyActivity.class);
+
+                    //Start the new activity
+                    startActivity(technologyIntent);
                 }catch(Exception e){
                     Context context = getApplicationContext();
 //                    CharSequence text = "Hier tritt der gamingIntent ein!";

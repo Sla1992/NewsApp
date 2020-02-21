@@ -1,7 +1,9 @@
 package com.example.android.quakereport;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +12,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.Closeable;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
-import android.graphics.drawable.GradientDrawable;
+
 
 public class NewsAdapter extends ArrayAdapter<News> {
 
@@ -37,6 +41,19 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }
 
         News currentNews = getItem(position);
+
+//        ImageView imageView =  (ImageView) listItemView.findViewById(R.id.image_view);
+//        imageView.setBackground(new ImageLoader( (ImageView) listItemView.findViewById(R.id.image_view)).execute(currentNews.getmImageUrl()));
+//        try {
+//            ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
+//            Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL(currentNews.getmImageUrl()).getContent());
+//            imageView.setImageBitmap(bitmap);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
 
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title);
         titleTextView.setText(currentNews.getmTitle());
@@ -70,5 +87,39 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         return listItemView;
 
+    }
+
+    public static final String PREFS_FILE = "javaeye.prefs";
+
+    public static Drawable getDrawableFromUrl(URL url) {
+        try {
+            InputStream is = url.openStream();
+            Drawable d = Drawable.createFromStream(is, "newSrc");
+            return d;
+        } catch (MalformedURLException e) {
+            // e.printStackTrace();
+        } catch (IOException e) {
+            // e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static void copy(InputStream in, OutputStream out)
+            throws IOException {
+        byte[] b = new byte[4 * 1024];
+        int read;
+        while ((read = in.read(b)) != -1) {
+            out.write(b, 0, read);
+        }
+    }
+
+    private static void closeStream(Closeable stream) {
+        if (stream != null) {
+            try {
+                stream.close();
+            } catch (IOException e) {
+                // Log.e(LOG_TAG, e.getMessage());
+            }
+        }
     }
 }
